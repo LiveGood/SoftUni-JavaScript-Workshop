@@ -34,3 +34,5 @@ function Stop(){
 }
 
 
+var vector = new Vector2(2);
+
