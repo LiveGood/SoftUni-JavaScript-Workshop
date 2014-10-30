@@ -35,4 +35,5 @@ function Stop(){
 
 
 var vector = new Vector2(2);
+var rectangle = new Rectangle(15, 15, 20, 20);
 
