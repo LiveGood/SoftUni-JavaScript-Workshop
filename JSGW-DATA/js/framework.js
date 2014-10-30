@@ -257,10 +257,14 @@ var Input = (function(){
 var input = new Input();
 
 document.documentElement.onmousemove = function(e){
-    e = e || window.event;
+    var rect = canvas.getBoundingClientRect();
+    if(e.clientX) {
+        input.mousePosition.x = e.clientX-rect.left;
+        input.mousePosition.y = e.clientY-rect.top;
+    }
 
-    input.mousePosition.x = e.clientWidth - input.offset.x;
-    input.mousePosition.y = e.clientHeight - input.offset.y;
+//    input.mousePosition.x = e.clientWidth - input.offset.x;
+//    input.mousePosition.y = e.clientHeight - input.offset.y;
 };
 
 document.documentElement.onmousedown = function(e){
